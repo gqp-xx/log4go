@@ -19,13 +19,13 @@ func (l LogFormat) Format(entry *logrus.Entry) ([]byte, error) {
 
 	timestamp := entry.Time.Format("2006-01-02 15:04:05")
 	logName, ok := entry.Data["log_name"]
-	if ok {
+	if ok && logName != nil {
 		logName = logName.(string)
 	} else {
 		logName = "-"
 	}
 	traceId, ok := entry.Data["trace_id"]
-	if ok {
+	if ok && traceId != nil {
 		traceId = traceId.(string)
 	} else {
 		traceId = "-"
