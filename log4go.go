@@ -2,11 +2,11 @@ package log4go
 
 import (
 	"bufio"
+	"github.com/gqp-xx/log4go/format"
+	"github.com/gqp-xx/log4go/writer"
 	"github.com/rifflock/lfshook"
 	"github.com/sirupsen/logrus"
 	"io"
-	"log4go/format"
-	"log4go/writer"
 	"os"
 )
 
