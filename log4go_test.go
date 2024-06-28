@@ -2,13 +2,13 @@ package log4go
 
 import (
 	"context"
+	"github.com/gqp-xx/log4go/writer"
 	"github.com/sirupsen/logrus"
-	"log4go/writer"
 	"testing"
 )
 
 func TestLog4GoInit(t *testing.T) {
-	Log4GoInit("/Users/Zhuanz/GolandProjects/log4go/log", writer.Os_StdOut, writer.DebugLevel)
+	Log4GoInit("/Users/GolandProjects/log4go/log", writer.Os_StdOut, writer.DebugLevel)
 	logrus.Info("******* test log4go init1 ******")
 	logrus.Warn("******* test log4go init2 ******")
 	logrus.Debug("******* test log4go init3 ******")
