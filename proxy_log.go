@@ -32,7 +32,7 @@ func Info(ctx context.Context, args ...interface{}) {
 	if ctx != nil {
 		std.WithField("trace_id", ctx.Value("trace_id")).Info(args...)
 	} else {
-		std.Logger.Info(args)
+		std.Logger.Info(args...)
 	}
 }
 func Infof(ctx context.Context, format string, args ...interface{}) {
@@ -94,7 +94,7 @@ func (proxyLog *ProxyLog) Info(ctx context.Context, args ...interface{}) {
 	if ctx != nil {
 		proxyLog.WithField("log_name", proxyLog.LogName).WithField("trace_id", ctx.Value("trace_id")).Info(args...)
 	} else {
-		proxyLog.Logger.Info(args)
+		proxyLog.Logger.Info(args...)
 	}
 }
 func (proxyLog *ProxyLog) Infof(ctx context.Context, format string, args ...interface{}) {
@@ -124,7 +124,7 @@ func (proxyLog *ProxyLog) Warn(ctx context.Context, args ...interface{}) {
 	if ctx != nil {
 		proxyLog.WithField("log_name", proxyLog.LogName).WithField("trace_id", ctx.Value("trace_id")).Warn(args...)
 	} else {
-		proxyLog.Logger.Warn(args)
+		proxyLog.Logger.Warn(args...)
 	}
 }
 func (proxyLog *ProxyLog) Warnf(ctx context.Context, format string, args ...interface{}) {
