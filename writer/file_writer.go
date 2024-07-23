@@ -39,8 +39,8 @@ func GetFileWriter(logFilePath string) (*rotatelogs.RotateLogs, *os.File) {
 		fmt.Println("Log4GoInit error, filePath err or filePath is not a directory")
 		panic("Log4GoInit error")
 	}
-	filename := path.Join(logFilePath, "service.log")
-	rotateFileName := filename + "_%Y%m%d"
+	filename := path.Join(logFilePath, "business")
+	rotateFileName := filename + "_%Y%m%d" + ".log"
 
 	rotatelogWriter, err := rotatelogs.New(
 		rotateFileName,
